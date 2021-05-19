@@ -1,4 +1,4 @@
-// Meses del año
+// 🗓 Meses del año
 // const mes = prompt('Elija un número entre el 1 y el 12')
 // switch(mes){
 //     case '1':
@@ -40,8 +40,26 @@
 //         break;
 //     }
 
+// ❄️ Estaciones del año
 
-
+// const estacion = prompt('elija una estación del año: 1. verano; 2. otoño; 3. invierno o 4. primavera');
+// switch(estacion){
+//     case '1':
+//         alert('el verano en el hemisferio sur va de 21 de diciembre al 21 de marzo y en el hemisferio norte del 21 de junio al 22 de septiembre.');
+//         break;
+//     case '2':
+//         alert('el otoño en el hemisferio sur va de 21 de marzo al 21 de junio y en el hemisferio norte del 22 de septiembre al 21 de diciembre.');
+//         break;
+//     case '3':
+//         alert('el invierno en el hemisferio sur va de 21 de junio al 22 de septiembre y en el hemisferio norte del 21 de diciembre al 21 de marzo.');
+//         break;
+//     case '4':
+//         alert('la primavera en el hemisferio sur va de 22 de septiembre al 21 de diciembre y en del hemisferio norte del 21 de marzo al 21 de junio.'); 
+//         break;
+//     default:
+//         alert('opción invalida');
+//         break;
+// }
 // 🐛 Tamagochi
 
 // const tamagochi = 'Bucca';
