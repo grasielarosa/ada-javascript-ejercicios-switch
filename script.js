@@ -60,6 +60,68 @@
 //         alert('opción invalida');
 //         break;
 // }
+
+// 🧮 Calculadora 1
+// const op = prompt('cual a operación que usted desea realizar? 1. suma; 2. resta; 3. multiplicación; o 4. división?');
+// const num1 = prompt('cual es el primero número para la operación?');
+// const num2 = prompt('cual es el segundo número para la operación?');
+// let resultado;
+// switch (op){
+//     case '1':
+//         resultado = parseFloat(num1) + parseFloat(num2);
+//         alert(`El resultados es ${resultado}.`);
+//         break;
+//     case '2':
+//         resultado = parseFloat(num1) - parseFloat(num2);
+//         alert(`El resultados es ${resultado}.`);
+//         break;
+//     case '3':
+//         resultado = parseFloat(num1) * parseFloat(num2);
+//         alert(`El resultados es ${resultado}.`);
+//         break;
+//     case '4':
+//         resultado = parseFloat(num1) / parseFloat(num2);
+//         alert(`El resultados es ${resultado}.`);
+//         break;
+//     default:
+//         alert('operación invalida')
+//         break;
+// }
+
+// 🧮 Calculadora 2
+// const form = document.getElementById("calculadora");
+// const calcular = (event) => {
+//     event.preventDefault();
+  
+//     const num1 = parseInt(event.target.num1.value);
+//     const num2 = parseInt(event.target.num2.value);
+//     const op = event.target.operacion.value;
+  
+//     let respuesta;
+  
+//     switch (op) {
+//       case "suma":
+//         respuesta = num1 + num2;
+//         break;
+  
+//       case "resta":
+//         respuesta = num1 - num2;
+//         break;
+  
+//       case "multiplicacion":
+//         respuesta = num1 * num2;
+//         break;
+  
+//       default:
+//         respuesta = num1 / num2;
+//     }
+  
+//     rta.innerText = respuesta;
+//   };
+  
+//   form.addEventListener("submit", calcular);
+
+
 // 🐛 Tamagochi
 
 // const tamagochi = 'Bucca';
