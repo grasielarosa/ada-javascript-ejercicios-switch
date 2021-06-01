@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- ejercicio calculadora -->
     <!-- <form id="calculadora" action="">
         <div class="form-group">
           <label for="operacion">Operación</label>
@@ -44,6 +46,31 @@
         "
         ></div>
     </form> -->
-    <script src="/script.js"></script>
+   <!-- ejercicio atm -->
+
+  <div id="enter" class="show">
+    <label for="password">Indique su contraseña para acceder al cajero: <input type="password" id="password"></label>
+    <button type="submit">Enviar</button>
+  </div>
+   <form id="access" class="hidden">
+      <h2>Hola, Ada!</h2>
+      <fieldset>
+        <select id="mySelect">
+          <option value="withdraw">Extraer</option>
+          <option value="deposit">Depositar</option>
+          <option value="transfer">Transferir</option>
+          <option value="change">Cambiar Pin</option>
+          <option value="out">Salir</option>
+        </select>
+        
+        <label for="qty">Valor <input type="number" id="qty"></label>
+        <br><br>
+        <button type="submit" id="confirm">Confirmar Operación</button>
+      </fieldset>
+      <div>
+        <h3>Su saldo es de <span id="result"></span> dolares.</h3>
+      </div>   
+   </form>
+<script src="./script.js"></script>
 </body>
 </html>

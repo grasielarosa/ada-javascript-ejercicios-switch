@@ -92,33 +92,33 @@
 // const form = document.getElementById("calculadora");
 // const calcular = (event) => {
 //     event.preventDefault();
-  
+
 //     const num1 = parseInt(event.target.num1.value);
 //     const num2 = parseInt(event.target.num2.value);
 //     const op = event.target.operacion.value;
-  
+
 //     let respuesta;
-  
+
 //     switch (op) {
 //       case "suma":
 //         respuesta = num1 + num2;
 //         break;
-  
+
 //       case "resta":
 //         respuesta = num1 - num2;
 //         break;
-  
+
 //       case "multiplicacion":
 //         respuesta = num1 * num2;
 //         break;
-  
+
 //       default:
 //         respuesta = num1 / num2;
 //     }
-  
+
 //     rta.innerText = respuesta;
 //   };
-  
+
 //   form.addEventListener("submit", calcular);
 
 
@@ -199,3 +199,81 @@
 // }else{
 //     alert('Chau');
 // }
+
+// 💵 ATM
+// ###CONTRASEÑA
+const password = document.getElementById('password');
+const enter = document.getElementById('enter');
+const access = document.getElementById('access');
+let pin = 'ada8va';
+
+const validate = (event) => {
+    event.preventDefault();
+
+    if (password.value === pin) {
+        enter.classList.remove('show');
+        enter.classList.add('hidden');
+        access.classList.remove('hidden');
+        access.classList.add('show');
+    } else {
+        alert('contraseña invalida');
+    }
+}
+
+enter.addEventListener('change', validate)
+
+//no he podido hacer con el submit
+
+// ###OPERACIONES
+const form = document.getElementById('access');
+let credit = Math.floor((Math.random() * (2000 - 0)) + 0);
+let creditUpdate = document.getElementById('result');
+creditUpdate.innerText = `${credit}`;
+
+const calculate = (event) => {
+    event.preventDefault();
+    const qty = parseFloat(event.target.qty.value);
+    const op = event.target.mySelect.value;
+    switch (op) {
+        case "withdraw":
+            if (credit >= qty) {
+                credit = credit - qty;
+            } else {
+                alert('saldo insuficiente para realizar la operación');
+            }
+            break;
+
+        case "deposit":
+            credit = credit + qty;
+            break;
+
+        case "transfer":
+            const cbu = prompt('Cual es el CBU?')
+            if (cbu === 'shouldbeanumber' && credit >= qty) {
+                credit = credit - qty;
+            } else if (cbu !== 'shouldbeanumber') {
+                alert('El CBU es incorrecto.')
+            } else if (credit <= qty) {
+                alert('saldo insuficiente para realizar la operación');
+            }
+            break;
+
+        case "change":
+            const confirm = prompt('Cual es la contraseña actual?');
+            if (confirm === pin){
+                let newPin = prompt('digite la nueva contraseña');
+                pin = newPin;
+            }
+            window.location.reload();
+            break;
+        case "out":
+            window.location.reload();
+            break;
+        default:
+            window.location.reload();
+            break;
+    };
+    creditUpdate.innerText = `${credit}`;
+};
+
+form.addEventListener('submit', calculate)
