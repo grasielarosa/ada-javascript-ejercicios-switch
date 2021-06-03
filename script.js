@@ -251,6 +251,7 @@ const calculate = (event) => {
             const cbu = prompt('Cual es el CBU?')
             if (cbu === 'shouldbeanumber' && credit >= qty) {
                 credit = credit - qty;
+                alert('transferencia realizada')
             } else if (cbu !== 'shouldbeanumber') {
                 alert('El CBU es incorrecto.')
             } else if (credit <= qty) {
@@ -263,6 +264,9 @@ const calculate = (event) => {
             if (confirm === pin){
                 let newPin = prompt('digite la nueva contraseña');
                 pin = newPin;
+            }
+            else {
+                alert('contraseña inválida');
             }
             window.location.reload();
             break;
